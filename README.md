@@ -89,11 +89,11 @@ Parameters:
 
     http://worldoftanks.ru/community/accounts/%PLAYER_ID%/api/%API_VER%/?source_token=%TOKEN%
 
-API version: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8
+API version: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9
 
 Example:
 
-    http://worldoftanks.ru/uc/accounts/500032519/api/1.8/?source_token=WG-WoT_Assistant-1.3.2
+    http://worldoftanks.ru/uc/accounts/500032519/api/1.9/?source_token=WG-WoT_Assistant-1.3.2
 
 Returns:
 
@@ -242,14 +242,14 @@ Description:
 
 ### Showing player's stats from past
 
-    http://dava2.worldoftanks.com/userstats/2/stats/slice/?platform=android&server=eu&account_id=%PLAYER_ID%&hours_ago=24&hours_ago=168&hours_ago=336
+    http://dava2.worldoftanks.com/userstats/2/stats/slice/?platform=android&server=ru&account_id=%PLAYER_ID%&hours_ago=24&hours_ago=168&hours_ago=336
 
 Description:
 * Gets stats up to 336 hours in past
 
 ### Showing particular part of stats from player:
 
-    http://dava2.worldoftanks.com/userstats/2/stats/?server=eu&platform=android&account_id=%PLAYER_ID%&from_date=2012-11-06T10%3A24%3A44&to_date=2012-11-20T10%3A24%3A44&interval=24&field=summary.battles_count&field=summary.wins&field=summary.survived_battles&field=experience.max_xp
+    http://dava2.worldoftanks.com/userstats/2/stats/?server=ru&platform=android&account_id=%PLAYER_ID%&from_date=2012-11-06T10%3A24%3A44&to_date=2012-11-20T10%3A24%3A44&interval=24&field=summary.battles_count&field=summary.wins&field=summary.survived_battles&field=experience.max_xp
 
 Description:
 * Dunno why but works only for some accounts, I guess it has something to do with dates
@@ -310,7 +310,7 @@ Region 3 (Africa)
   <tr><th>Method</th><th>Accepted API version</th></tr>
   <tr><td>Searching players</td><td>1.0, 1.1</td></tr>
   <tr><td>Searching clans</td><td>1.0, 1.1</td></tr>
-  <tr><td>Showing player stats</td><td>1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8</td></tr>
+  <tr><td>Showing player stats</td><td>1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9</td></tr>
   <tr><td>Personal info</td><td>1.0</td></tr>
   <tr><td>Logging in</td><td>1.0</td></tr>
 </table>
