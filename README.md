@@ -18,23 +18,23 @@ At this moment here is list of API features that has been discovered:
 
 Most of methods require appropriate API version, as well as token. So far every token I have found fits into every method.
 
-    http://worldoftanks.ru/community/...
+    http://api.worldoftanks.ru/community/...
 can be replaced with
 
-    http://worldoftanks.ru/uc/...
+    http://api.worldoftanks.ru/uc/...
 
 
 ## List of methods
 
 ### Searching players
 
-    http://worldoftanks.ru/community/accounts/api/%API_VER%/?source_token=%TOKEN%&search=%NAME%&offset=%OFFSET%&limit=%LIMIT%
+    http://api.worldoftanks.ru/community/accounts/api/%API_VER%/?source_token=%TOKEN%&search=%NAME%&offset=%OFFSET%&limit=%LIMIT%
 
 API version: 1.0, 1.1
 
 Example:
 
-    http://worldoftanks.ru/community/accounts/api/1.1/?source_token=WG-WoT_Assistant-1.3.2&search=bristol&offset=8&limit=3
+    http://api.worldoftanks.ru/community/accounts/api/1.1/?source_token=WG-WoT_Assistant-1.3.2&search=bristol&offset=8&limit=3
 
 Returns:
 
@@ -87,13 +87,13 @@ Parameters:
 
 ### Showing player's stats
 
-    http://worldoftanks.ru/community/accounts/%PLAYER_ID%/api/%API_VER%/?source_token=%TOKEN%
+    http://api.worldoftanks.ru/community/accounts/%PLAYER_ID%/api/%API_VER%/?source_token=%TOKEN%
 
 API version: 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9
 
 Example:
 
-    http://worldoftanks.ru/uc/accounts/500032519/api/1.9/?source_token=WG-WoT_Assistant-1.3.2
+    http://api.worldoftanks.ru/uc/accounts/500032519/api/1.9/?source_token=WG-WoT_Assistant-1.3.2
 
 Returns:
 
@@ -242,26 +242,26 @@ Description:
 
 ### Showing player's stats from past
 
-    http://dava2.worldoftanks.com/userstats/2/stats/slice/?platform=android&server=ru&account_id=%PLAYER_ID%&hours_ago=24&hours_ago=168&hours_ago=336
+    http://http://dvstats.wargaming.net/userstats/2/stats/slice/?platform=android&server=ru&account_id=%PLAYER_ID%&hours_ago=24&hours_ago=168&hours_ago=336
 
 Description:
 * Gets stats up to 336 hours in past
 
 ### Showing particular part of stats from player:
 
-    http://dava2.worldoftanks.com/userstats/2/stats/?server=ru&platform=android&account_id=%PLAYER_ID%&from_date=2012-11-06T10%3A24%3A44&to_date=2012-11-20T10%3A24%3A44&interval=24&field=summary.battles_count&field=summary.wins&field=summary.survived_battles&field=experience.max_xp
+    http://http://dvstats.wargaming.net/userstats/2/stats/?server=ru&platform=android&account_id=%PLAYER_ID%&from_date=2012-11-06T10%3A24%3A44&to_date=2012-11-20T10%3A24%3A44&interval=24&field=summary.battles_count&field=summary.wins&field=summary.survived_battles&field=experience.max_xp
 
 Description:
 * Dunno why but works only for some accounts, I guess it has something to do with dates
 
 ### Notifications
 
-    http://dava2.worldoftanks.com/notify/messages/?server=ru&device_platform=android&device_id=331929b195b91010&app_company=WG&app_product=WoT_Assistant&app_version=1.3.2&from_id=0
+    http://http://dvstats.wargaming.net/notify/messages/?server=ru&device_platform=android&device_id=331929b195b91010&app_company=WG&app_product=WoT_Assistant&app_version=1.3.2&from_id=0
 
 
 ### Searching clans
 
-    http://worldoftanks.ru/community/clans/api/%API_VER%/?source_token=%TOKEN%&search=%CLAN_NAME%&offset=0&limit=1
+    http://api.worldoftanks.ru/community/clans/api/%API_VER%/?source_token=%TOKEN%&search=%CLAN_NAME%&offset=0&limit=1
 
 Optional: 
     &order_by=name
@@ -274,13 +274,13 @@ Description:
 
 ### Showing clan's stats
 
-    http://worldoftanks.ru/community/clans/%CLAN_ID%/api/%API_VER%/?source_token=%TOKEN%
+    http://api.worldoftanks.ru/community/clans/%CLAN_ID%/api/%API_VER%/?source_token=%TOKEN%
 
 API version: 1.0, 1.1
 
 
 ### Personal stats (after logging in via API)
-    http://worldoftanks.ru/personal/api/%API_VER%/?source_token=%TOKEN%
+    http://api.worldoftanks.ru/personal/api/%API_VER%/?source_token=%TOKEN%
 
 API version: 1.0
 
@@ -320,6 +320,7 @@ Region 3 (Africa)
 * WG-WoT_Assistant-1.1.2
 * WG-WoT_Assistant-1.2.2
 * WG-WoT_Assistant-1.3.2
+* WG-WoT_Assistant-1.4
 * Intellect_Soft-WoT_Mobile-site
 * Intellect_Soft-WoT_Mobile
 * WG-WoT_Assistant-test
