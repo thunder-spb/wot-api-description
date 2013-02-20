@@ -299,9 +299,30 @@ Region 2 (Mediterranean)
 
     http://worldoftanks.ru/uc/clanwars/provinces/regions/4/?ct=json
 
-Region 3 (Africa)
+Region 3 (West Africa)
 
     http://worldoftanks.ru/uc/clanwars/provinces/regions/3/?ct=json
+
+Region 4 (East Africa)
+    
+    http://worldoftanks.ru/uc/clanwars/provinces/regions/9/?ct=json
+
+Region 5 (Ural)
+
+    http://worldoftanks.ru/uc/clanwars/provinces/regions/8/?ct=json
+    
+Region 6 (Siberia and Far East)
+
+    http://worldoftanks.ru/uc/clanwars/provinces/regions/7/?ct=json
+    
+Region 7 (Asia)
+
+    http://worldoftanks.ru/uc/clanwars/provinces/regions/6/?ct=json
+    
+Region 8 (East Coast USA)
+
+    http://worldoftanks.ru/uc/clanwars/provinces/regions/2/?ct=json
+
 
 To get ClanWars info
 
