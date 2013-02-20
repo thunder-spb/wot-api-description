@@ -304,6 +304,7 @@ Region 3 (Africa)
     http://worldoftanks.ru/uc/clanwars/provinces/regions/3/?ct=json
 
 To get ClanWars info
+
     http://worldoftanks.ru/uc/clans/%CLAN_ID%/battles/?type=table
     
 ## API versions
