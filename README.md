@@ -23,6 +23,24 @@ can be replaced with
 
     http://api.worldoftanks.ru/uc/...
 
+Also, here is the list of api servers:
+
+    http://api.worldoftanks.ru
+    http://api.worldoftanks.eu
+    http://api.worldoftanks.com
+    http://api.worldoftanks-sea.com
+    http://api.worldoftanks.kr
+
+If you want to get news from site:
+
+    http://game.worldoftanks.ru/rss
+    http://game.worldoftanks.eu/rss
+    http://game.worldoftanks.com/rss
+    http://worldoftanks-sea.com/news/rss/en/
+    http://worldoftanks.kr/news/rss/ko/
+    
+Some time ago I've created project WoT/WoWP News RSS Export for all servers and all languages availabe on sites for that moment:
+    http://api.wot-blackdeath.ru/en/projects/wot-wowp-rss
 
 ## List of methods
 
