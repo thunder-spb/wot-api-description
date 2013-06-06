@@ -309,38 +309,52 @@ API version: 1.0
 
 ### Global map
 
+At least in russian cluster these link were changed!
+
 Region 1 (Northern Europe)
 
-    http://worldoftanks.ru/uc/clanwars/provinces/regions/5/?ct=json
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/1/?ct=json
 
 Region 2 (Mediterranean)
 
-    http://worldoftanks.ru/uc/clanwars/provinces/regions/4/?ct=json
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/2/?ct=json
 
 Region 3 (West Africa)
 
-    http://worldoftanks.ru/uc/clanwars/provinces/regions/3/?ct=json
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/3/?ct=json
 
 Region 4 (East Africa)
     
-    http://worldoftanks.ru/uc/clanwars/provinces/regions/9/?ct=json
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/9/?ct=json
 
 Region 5 (Ural)
 
-    http://worldoftanks.ru/uc/clanwars/provinces/regions/8/?ct=json
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/8/?ct=json
     
 Region 6 (Siberia and Far East)
 
-    http://worldoftanks.ru/uc/clanwars/provinces/regions/7/?ct=json
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/7/?ct=json
     
 Region 7 (Asia)
 
-    http://worldoftanks.ru/uc/clanwars/provinces/regions/6/?ct=json
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/6/?ct=json
     
+Region 11 (South Africa)
+
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/11/?ct=json
+
+*Existing, but not active for now (on russian cluster):*
 Region 8 (East Coast USA)
 
-    http://worldoftanks.ru/uc/clanwars/provinces/regions/2/?ct=json
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/2/?ct=json
 
+Region 9 (Atlantida)
+
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/9/?ct=json
+
+Region 10 (Canada and Alaska)
+
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/10/?ct=json
 
 To get ClanWars info
 
