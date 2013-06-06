@@ -309,7 +309,7 @@ API version: 1.0
 
 ### Global map
 
-At least in russian cluster these link were changed!
+**At least in russian cluster these link were changed!**
 
 Region 1 (Northern Europe)
 
@@ -343,7 +343,8 @@ Region 11 (South Africa)
 
     http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/11/?ct=json
 
-*Existing, but not active for now (on russian cluster):*
+**Existing, but not active for now (on russian cluster):**
+
 Region 8 (East Coast USA)
 
     http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/2/?ct=json
