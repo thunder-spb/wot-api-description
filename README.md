@@ -272,9 +272,33 @@ Description:
 Description:
 * Dunno why but works only for some accounts, I guess it has something to do with dates
 
+### Getting all actual tanks in game
+
+    http://api.worldoftanks.eu/encyclopedia/vehicles/api/%API_VER%/?source_token=%TOKEN%
+   
+API version: 1.0
+
+Tokens: _see at the end of file_
+
+Example: 
+
+    http://api.worldoftanks.eu/encyclopedia/vehicles/api/1.0/?source_token=WG-WoT_Assistant-1.3.2
+
+### Detailed tank data
+
+    http://api.worldoftanks.eu /encyclopedia/vehicles/%NATION%/%TANK_ID%/api/%API_VER%/?source_token=%TOKEN%
+    
+API version: 1.0
+
+Tokens: _look at the end of file_
+
+Example: 
+
+    http://api.worldoftanks.eu/encyclopedia/vehicles/ussr/MS-1/api/1.0/?source_token=WG-WoT_Assistant-1.3.2
+
 ### Notifications
 
-    http://http://dvstats.wargaming.net/notify/messages/?server=ru&device_platform=android&device_id=331929b195b91010&app_company=WG&app_product=WoT_Assistant&app_version=1.3.2&from_id=0
+    http://dvstats.wargaming.net/notify/messages/?server=ru&device_platform=android&device_id=331929b195b91010&app_company=WG&app_product=WoT_Assistant&app_version=1.3.2&from_id=0
 
 
 ### Searching clans
@@ -382,3 +406,6 @@ To get ClanWars info
 * Intellect_Soft-WoT_Mobile
 * WG-WoT_Assistant-test
 * Intellect_Soft-WoT_Mobile-unofficial_stats
+ 
+Thanks:
+* <a href=https://github.com/Racy>Racy</a> for providing tanks list
