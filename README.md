@@ -381,9 +381,20 @@ Region 10 (Canada and Alaska)
 
     http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/10/?ct=json
 
-To get ClanWars info
+## To get ClanWars info
 
-    http://worldoftanks.ru/uc/clans/%CLAN_ID%/battles/?type=table
+    http://worldoftanks.ru/community/clans/%CLAN_ID%/battles/list/?id=js-battles-table
+    
+To make such request you need to setup some addditional options in request header (example for cURL):
+````php
+        curl_setopt($ch, CURLOPT_HTTPHEADER,
+            array(
+                'Accept: application/json, text/javascript, text/html, */*',
+                'X-Requested-With: XMLHttpRequest'
+            )
+        );
+````
+
     
 ## API versions
 
@@ -402,6 +413,7 @@ To get ClanWars info
 * WG-WoT_Assistant-1.2.2
 * WG-WoT_Assistant-1.3.2
 * WG-WoT_Assistant-1.4
+* WG-WoT_Assistant-1.4.1
 * Intellect_Soft-WoT_Mobile-site
 * Intellect_Soft-WoT_Mobile
 * WG-WoT_Assistant-test
