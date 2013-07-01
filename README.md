@@ -1,20 +1,20 @@
 # World of Tanks unofficial API
 
-
 World of Tanks, popular MMO game about tanks from time around WWII, has some nice mobile application called [Wot Assistant](https://play.google.com/store/apps/details?id=ru.worldoftanks.mobile) (available also at [AppStore](http://itunes.apple.com/us/app/wot-assistant/id500174696?mt=8) and [MS Marketplace](http://www.windowsphone.com/en-us/apps/f02b42f1-a19b-4736-a31d-c4bff545cb83)). With simple packet sniffing you can guess how it retrieves players' statistics.
 
 Surprisingly, mobile application uses quite simple API over HTTP which serves data in JSON, which is great help for people interested in creating own applications handling statistical data in game.
 
 At this moment here is list of API features that has been discovered:
-* searching players by names
-* searching clans by names
-* showing current player statistics
-* showing current clan information
-* showing player stats from given time
-* showing player stats of particular property
-* logging in (uses HTTPS)
-* receiving notifications
-* global map (clan wars)
+* [searching players by names](#searching-players)
+* [searching clans by names](#searching-clans)
+* [showing current player statistics](#showing-players-stats)
+* [showing current clan information](#showing-clans-stats)
+* [showing player stats from given time](#showing-players-stats-from-past)
+* [showing player stats of particular property](#showing-particular-part-of-stats-from-player)
+* [all actual tanks in game and detailed info on each tank](#getting-all-actual-tanks-in-game)
+* [logging in (uses HTTPS)](#login-request)
+* [receiving notifications](#notifications)
+* [global map (clan wars)](#global-map)
 
 Most of methods require appropriate API version, as well as token. So far every token I have found fits into every method.
 
@@ -286,8 +286,12 @@ Example:
 
 ### Detailed tank data
 
-    http://api.worldoftanks.eu /encyclopedia/vehicles/%NATION%/%TANK_ID%/api/%API_VER%/?source_token=%TOKEN%
+    http://api.worldoftanks.eu/encyclopedia/vehicles/%NATION%/%TANK_ID%/api/%API_VER%/?source_token=%TOKEN%
     
+Nations: ussr, uk, usa, germany, france, china
+
+Tank IDs: _look at the all tanks list_
+
 API version: 1.0
 
 Tokens: _look at the end of file_
