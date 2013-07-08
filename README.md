@@ -1,3 +1,4 @@
+You can "thanks" me here: [api.wot-blackdeath.ru/en/donate/](http://api.wot-blackdeath.ru/en/donate)
 # World of Tanks unofficial API
 
 World of Tanks, popular MMO game about tanks from time around WWII, has some nice mobile application called [Wot Assistant](https://play.google.com/store/apps/details?id=ru.worldoftanks.mobile) (available also at [AppStore](http://itunes.apple.com/us/app/wot-assistant/id500174696?mt=8) and [MS Marketplace](http://www.windowsphone.com/en-us/apps/f02b42f1-a19b-4736-a31d-c4bff545cb83)). With simple packet sniffing you can guess how it retrieves players' statistics.
