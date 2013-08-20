@@ -159,4 +159,70 @@ All Tanks turrets:
 
     http://api.worldoftanks.ru/2.0/encyclopedia/tankturrets/?application_id=171745d21f7f98fd8878771da1000a31
     
+
+### Global map
+
+**At least in russian cluster these link were changed!**
+
+Region 1 (Northern Europe)
+
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/1/?ct=json
+
+Region 2 (Mediterranean)
+
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/2/?ct=json
+
+Region 3 (West Africa)
+
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/3/?ct=json
+
+Region 4 (East Africa)
+    
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/4/?ct=json
+
+Region 5 (Ural)
+
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/5/?ct=json
+    
+Region 6 (Siberia and Far East)
+
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/6/?ct=json
+    
+Region 7 (Asia)
+
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/7/?ct=json
+    
+Region 11 (South Africa)
+
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/11/?ct=json
+
+**Existing, but not active for now (on russian cluster):**
+
+Region 8 (East Coast USA)
+
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/8/?ct=json
+
+Region 9 (Atlantida)
+
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/9/?ct=json
+
+Region 10 (Canada and Alaska)
+
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/10/?ct=json
+
+## To get ClanWars info
+
+    http://worldoftanks.ru/community/clans/%CLAN_ID%/battles/list/?id=js-battles-table
+    
+To make such request you need to setup some addditional options in request header (example for cURL):
+````php
+        curl_setopt($ch, CURLOPT_HTTPHEADER,
+            array(
+                'Accept: application/json, text/javascript, text/html, */*',
+                'X-Requested-With: XMLHttpRequest'
+            )
+        );
+````
+
+  
 It's all for now. If you have any questions or suggestions, please ask!
