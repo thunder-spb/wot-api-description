@@ -1,4 +1,4 @@
-You can "thanks" me here: [http://wotapi.ru/en/donate/](api.wot-blackdeath.ru/en/donate/)
+You can "thanks" me here: [wotapi.ru/en/donate/](http://wotapi.ru/en/donate/)
 
 # World of Tanks unofficial API
 
