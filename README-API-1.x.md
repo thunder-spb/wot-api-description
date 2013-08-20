@@ -354,19 +354,19 @@ Region 3 (West Africa)
 
 Region 4 (East Africa)
     
-    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/9/?ct=json
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/4/?ct=json
 
 Region 5 (Ural)
 
-    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/8/?ct=json
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/5/?ct=json
     
 Region 6 (Siberia and Far East)
 
-    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/7/?ct=json
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/6/?ct=json
     
 Region 7 (Asia)
 
-    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/6/?ct=json
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/7/?ct=json
     
 Region 11 (South Africa)
 
@@ -376,7 +376,7 @@ Region 11 (South Africa)
 
 Region 8 (East Coast USA)
 
-    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/2/?ct=json
+    http://cw.worldoftanks.ru/clanwars/maps/provinces/regions/8/?ct=json
 
 Region 9 (Atlantida)
 
