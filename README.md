@@ -163,6 +163,10 @@ Particular module info, this is example for module id 18436 from turrets list:
 
     http://api.worldoftanks.ru/2.0/encyclopedia/tankguns/?application_id=171745d21f7f98fd8878771da1000a31&module_id=18436
 
+All achievements:
+
+    http://api.worldoftanks.ru/2.0/encyclopedia/achievements/?application_id=demo
+
 ### Global map
 
 **At least in russian cluster these link were changed!**
