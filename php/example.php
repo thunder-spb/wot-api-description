@@ -2,7 +2,7 @@
 include 'WotClass.php';
 $wot = new Wot();
 //print_r($wot->getUser('info', '6440135', 'RU'));
-print_r($wot->getUser('info', '6440135,14661324', 'RU'));
+//print_r($wot->getUser('info', '6440135,14661324', 'RU'));
 //print_r($wot->getUser('search', 'Upgradeovec', 'RU'));
 //print_r($wot->getUser('vehicles', '6440135', 'RU'));
 //print_r($wot->getUser('ratings', '6440135', 'RU'));
