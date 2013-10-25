@@ -32,9 +32,12 @@ So you have this choise:
 * dropped_capture_points
 
 So, emaple command to create graph of total battles (debian default path):
+
 cd /etc/munin/plugins/
 ln -s /usr/share/munin/plugins/wot_battles - for total battles counter graph
+
 and/or
+
 ln -s /usr/share/munin/plugins/wot_hits - for total hits graph
 
 8. You may check them by run ./wot_battles and see valid values
