@@ -1,28 +1,10 @@
 <?php
 class wotDefaultSettings {
 
-	protected $_tbls = array(
-			'clanlist' => 'cw_clans',
-			'clanbattles' => 'cw_battles',
-			'regions' => 'cw_regions',
-			'i18n_regions' => 'cw_regions_i18n',
-			'i18n_province' => 'cw_provinces_i18n',
-			'i18n_maps' => 'cw_maps_i18n',
-			'prov_info' => 'cw_provinces_info',
-			'prov_server' => 'cw_provinces_server',
-			'prov_primetime' => 'cw_provinces_primetime',
-			'reg_prov' => 'cw_region_province',
-		);
 	protected $_battle_type_styles = array(
 		'landing' => "background-image:url(http://wotapi.ru/images/battle_types.png);display:inline-block;width:16px;height:16px;background-position:-48px;",
 		'for_province' => "background-image:url(http://wotapi.ru/images/battle_types.png);display:inline-block;width:16px;height:16px;background-position: -32px;",
 		'meeting_engagement' => "background-image:url(http://wotapi.ru/images/battle_types.png);display:inline-block;width:16px;height:16px;background-position: 0px;"
-	);
-	protected $_allowed_settings = array(
-		'type' => array(
-			'html',
-			'json',
-		),
 	);
 	protected $_default_api_settings = array(
 			'api' => array(
