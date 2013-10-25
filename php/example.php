@@ -1,4 +1,4 @@
-<?
+<?php
 include 'WotClass.php';
 $wot = new Wot();
 //print_r($wot->getUser('info', '6440135', 'RU'));

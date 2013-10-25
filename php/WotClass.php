@@ -1,4 +1,4 @@
-<?
+<?php
 Class Wot {
 	var $p = Array(
 		'RU' => Array(
