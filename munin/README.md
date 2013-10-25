@@ -1,5 +1,3 @@
-# World of Tanks munin plugin
-
 ### Install
 
 1. First you must place WotClass.php at any place, ex: /usr/local/lib/php
@@ -14,31 +12,28 @@ Put them (or many with ',' delimeter) to $params;
 7. Create symlink to 'wot_' file.
 Note! Wot plugin is woldcard. So you must create symlink name as params.
 So you have this choise:
-* spotted
-* hits
-* battle_avg_exp
-* draws
-* wins
-* loses
-* capture_points
-* battles
-* damage_dealt
-* hits_percents
-* damage_received
-* shots
-* xp
-* frags
-* survived_battles
-* dropped_capture_points
+ * spotted
+ * hits
+ * battle_avg_exp
+ * draws
+ * wins
+ * loses
+ * capture_points
+ * battles
+ * damage_dealt
+ * hits_percents
+ * damage_received
+ * shots
+ * xp
+ * frags
+ * survived_battles
+ * dropped_capture_points
 
-So, emaple command to create graph of total battles (debian default path):
-
-cd /etc/munin/plugins/
-ln -s /usr/share/munin/plugins/wot_battles - for total battles counter graph
-
+So, enable command to create graph of total battles (debian default path):
+    cd /etc/munin/plugins/
+    ln -s /usr/share/munin/plugins/wot_battles - for total battles counter graph
 and/or
-
-ln -s /usr/share/munin/plugins/wot_hits - for total hits graph
+    ln -s /usr/share/munin/plugins/wot_hits - for total hits graph
 
 8. You may check them by run ./wot_battles and see valid values
 
