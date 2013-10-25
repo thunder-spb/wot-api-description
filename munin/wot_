@@ -4,7 +4,7 @@ include '/full/path/to/WotClass.php';
 $wot = new Wot();
 $params = '6440135,14661324';	// fill there you account ids
 $cluster = 'RU';
-$request = substr($_SERVER['SCRIPT_FILENAME'], 6);
+$request = substr(basename($_SERVER['SCRIPT_FILENAME']), 4);
 
 if(count($argv) == 2 && $arv[1] == 'authconf') {
 	exit('yes');
