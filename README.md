@@ -119,7 +119,7 @@ Ofcourse you can make request for multiple clans like in multiple players info.
 
 It's easy:
 
-    http://<CLUSTER_API_ADDRESS>/2.0/clan/info//?application_id=<APP_ID>&search=<PARTIAL_CLAN_NAME>
+    http://<CLUSTER_API_ADDRESS>/2.0/clan/list/?application_id=<APP_ID>&search=<PARTIAL_CLAN_NAME>
 
 Example:
 
