@@ -1,9 +1,15 @@
 #!/usr/bin/php
 <?php
-include '/full/path/to/WotClass.php';
+/*
+* Title: World Of Tanks wildcard plugin for Munin
+* Author: Marsel Markhabulin (@Satariall)
+* Email: milar@marsell.ws
+*/
+
+include '/full/path/to/WotClass.php';	// it here https://github.com/Satariall/wot-api-description/blob/master/php/WotClass.php
 $wot = new Wot();
-$params = '6440135,14661324';	// fill there you account ids
-$cluster = 'RU';
+$params = '6440135,14661324';	// fill there you account ids. You  may get them from site profile OR search by nickname with WotClass
+$cluster = 'RU';	// OR 'EU', 'NA', 'ASIA', 'KR' - region of you account(s)
 $request = substr(basename($_SERVER['SCRIPT_FILENAME']), 4);
 
 if(count($argv) == 2 && $arv[1] == 'authconf') {
