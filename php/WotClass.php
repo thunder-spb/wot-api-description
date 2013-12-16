@@ -2,10 +2,10 @@
 Class Wot {
 	public function __construct($region='RU', $lang='ru', $app_id=null, $cache=null) {
 		switch ($region) {
-			case 'EU': { $this->region = 'RU'; $this->api_url = 'http://api.worldoftanks.eu'; break; }
-			case 'NA': { $this->region = 'RU'; $this->api_url = 'http://api.worldoftanks.com'; break; }
-			case 'ASIA': { $this->region = 'RU'; $this->api_url = 'http://api.worldoftanks.asia'; break; }
-			case 'KR': { $this->region = 'RU'; $this->api_url = 'http://api.worldoftanks.kr'; break; }
+			case 'EU': { $this->region = 'EU'; $this->api_url = 'http://api.worldoftanks.eu'; break; }
+			case 'NA': { $this->region = 'NA'; $this->api_url = 'http://api.worldoftanks.com'; break; }
+			case 'ASIA': { $this->region = 'ASIA'; $this->api_url = 'http://api.worldoftanks.asia'; break; }
+			case 'KR': { $this->region = 'KR'; $this->api_url = 'http://api.worldoftanks.kr'; break; }
 			default: { $this->region = 'RU'; $this->api_url = 'http://api.worldoftanks.ru'; break; }
 		}
 		$this->app_id = $app_id;
@@ -23,10 +23,10 @@ Class Wot {
 
 	public function setRegion($region) {
 		switch ($region) {
-			case 'EU': { $this->region = 'RU'; $this->api_url = 'http://api.worldoftanks.eu'; break; }
-			case 'NA': { $this->region = 'RU'; $this->api_url = 'http://api.worldoftanks.com'; break; }
-			case 'ASIA': { $this->region = 'RU'; $this->api_url = 'http://api.worldoftanks.asia'; break; }
-			case 'KR': { $this->region = 'RU'; $this->api_url = 'http://api.worldoftanks.kr'; break; }
+			case 'EU': { $this->region = 'EU'; $this->api_url = 'http://api.worldoftanks.eu'; break; }
+			case 'NA': { $this->region = 'NA'; $this->api_url = 'http://api.worldoftanks.com'; break; }
+			case 'ASIA': { $this->region = 'ASIA'; $this->api_url = 'http://api.worldoftanks.asia'; break; }
+			case 'KR': { $this->region = 'KR'; $this->api_url = 'http://api.worldoftanks.kr'; break; }
 			default: { $this->region = 'RU'; $this->api_url = 'http://api.worldoftanks.ru'; break; }
 		}
 	}
