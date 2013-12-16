@@ -43,9 +43,7 @@ if(count($argv) == 2 && $argv[1] == 'config') {
 		case 'dropped_capture_points': { print("graph_title WOT Dropped Capture Points Count\n"); print("graph_vlabel Dropped Capture Points\n"); break; }
 	}
 	
-	//print_r($wot->getUser('info', '6440135', $fields));			// Ex.: $fields = Array('accound_id', 'created_at', 'nickname', 'updated_at');
-	
-	$fields = Array(); // Make a full request only for develop. Select only usable fields in production for less request size
+	$fields = Array('nickname');	// $fields = Array(); // Make a full request only for develop. Select only usable fields in production for less request size
 	$obj = $wot->getUser('info', $params, $fields);
 	foreach($obj as $p) {
 		$graph_order .= $p->nickname.' ';
@@ -63,7 +61,7 @@ if(count($argv) == 2 && $argv[1] == 'config') {
 }
 
 // graph values
-$fields = Array(); // Make a full request only for develop. Select only usable fields in production for less request size
+$fields = Array('nickname', 'statistics.all.'.$request);	// $fields = Array(); // Make a full request only for develop. Select only usable fields in production for less request size
 $obj = $wot->getUser('info', $params, $fields);
 switch ($request) {
 	case 'spotted': { foreach($obj as $p) { print($p->nickname.".value ".$p->statistics->all->spotted."\n"); } break; }
@@ -83,5 +81,6 @@ switch ($request) {
 	case 'survived_battles': { foreach($obj as $p) { print($p->nickname.".value ".$p->statistics->all->survived_battles."\n"); } break; }
 	case 'dropped_capture_points': { foreach($obj as $p) { print($p->nickname.".value ".$p->statistics->all->dropped_capture_points."\n"); } break; }
 }
+
 exit();
 ?>
