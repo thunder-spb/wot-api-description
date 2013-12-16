@@ -3,18 +3,21 @@
 /*
 * Title: World Of Tanks wildcard plugin for Munin
 * Author: Marsel Markhabulin (@Satariall)
+* Licence: GPL v2
 * Email: milar@marsell.ws
 */
+ini_set('display_errors',0);
+ini_set('error_reporting',1);
 
-include '/full/path/to/WotClass.php';	// it here https://github.com/Satariall/wot-api-description/blob/master/php/WotClass.php
-$wot = new Wot();
+include '../php/WotClass.php';	// it here https://github.com/Satariall/wot-api-description/blob/master/php/WotClass.php
+$wot = new Wot('RU', 'ru', '9fd2a424400aa541a994056eddeb2438');		// region, language, your <app_id_here>
 $params = '6440135,14661324';	// fill there you account ids. You  may get them from site profile OR search by nickname with WotClass
-$cluster = 'RU';	// OR 'EU', 'NA', 'ASIA', 'KR' - region of you account(s)
 $request = substr(basename($_SERVER['SCRIPT_FILENAME']), 4);
 
-if(count($argv) == 2 && $arv[1] == 'authconf') {
+if (count($argv) == 2 && $arv[1] == 'authconf') {
 	exit('yes');
 }
+
 
 // graph config for munin
 if(count($argv) == 2 && $argv[1] == 'config') {
@@ -39,7 +42,11 @@ if(count($argv) == 2 && $argv[1] == 'config') {
 		case 'survived_battles': { print("graph_title WOT Survived Battles Count\n"); print("graph_vlabel Survived Battles\n"); break; }
 		case 'dropped_capture_points': { print("graph_title WOT Dropped Capture Points Count\n"); print("graph_vlabel Dropped Capture Points\n"); break; }
 	}
-	$obj = $wot->getUser('info', $params, $cluster);
+	
+	//print_r($wot->getUser('info', '6440135', $fields));			// Ex.: $fields = Array('accound_id', 'created_at', 'nickname', 'updated_at');
+	
+	$fields = Array(); // Make a full request only for develop. Select only usable fields in production for less request size
+	$obj = $wot->getUser('info', $params, $fields);
 	foreach($obj as $p) {
 		$graph_order .= $p->nickname.' ';
 		$graph_draw .= $p->nickname.".label ".$p->nickname."\n";
@@ -56,7 +63,8 @@ if(count($argv) == 2 && $argv[1] == 'config') {
 }
 
 // graph values
-$obj = $wot->getUser('info', $params, $cluster);
+$fields = Array(); // Make a full request only for develop. Select only usable fields in production for less request size
+$obj = $wot->getUser('info', $params, $fields);
 switch ($request) {
 	case 'spotted': { foreach($obj as $p) { print($p->nickname.".value ".$p->statistics->all->spotted."\n"); } break; }
 	case 'hits': { foreach($obj as $p) { print($p->nickname.".value ".$p->statistics->all->hits."\n"); } break; }
