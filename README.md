@@ -92,13 +92,11 @@ Response: https://gist.github.com/thunder-spb/6279533
 
 Just player ratings:
 
-    http://<CLUSTER_API_ADDRESS>/2.0/account/tanks/?application_id=<APP_ID>&account_id=<ACCOUNT_ID>
+	http://<CLUSTER_API_ADDRESS>/2.0/ratings/accounts/?type=<TYPE>&application_id=<APP_ID>&account_id=<ACCOUNT_ID>
 
 Example:
-    
-    http://api.worldoftanks.ru/2.0/account/ratings/?application_id=171745d21f7f98fd8878771da1000a31&account_id=461
-    
-Response: https://gist.github.com/thunder-spb/6279635
+
+	http://api.worldoftanks.ru/2.0/ratings/accounts/?type=all&application_id=171745d21f7f98fd8878771da1000a31&account_id=461
 
 ## Clans
 ### Clan info
