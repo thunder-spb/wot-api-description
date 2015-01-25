@@ -1,5 +1,9 @@
 This is a modified version from thunder-spb/wot-api-description.
 
+# World of Tanks unofficial API
+
+Supports the Wargaming 2.0 API
+
 ### Official Wargaming Developer Room API Reference
 
 [Wargaming Developer Room - API Reference](http://na.wargaming.net/developers/api_reference/wot/account/list/)
@@ -7,10 +11,6 @@ This is a modified version from thunder-spb/wot-api-description.
 ### News from Wargaming around API changes and new features
 
 [Wargaming Developer Room - News](http://na.wargaming.net/developers/news/)
-
-# World of Tanks unofficial API
-
-Supports the Wargaming 2.0 API
 
 ### API servers
 
