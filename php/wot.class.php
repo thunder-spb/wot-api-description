@@ -34,6 +34,11 @@ Class Wot
 	protected $_cache;
 
 	/**
+	 * @var int
+	 */
+	protected $_limit = 0;
+
+	/**
 	 * @param string $region
 	 * @param string $lang
 	 * @param string $app_id
@@ -132,6 +137,14 @@ Class Wot
 	}
 
 	/**
+	 * @param int $val
+	 */
+	public function setLimit($val)
+	{
+		$this->_limit = (int)$val;
+	}
+
+	/**
 	 * @throws InvalidArgumentException
 	 * @param string $request available values:<br>
 	 *		"info",<br>
@@ -145,6 +158,7 @@ Class Wot
 	 * @param array $fields
 	 * @return string
 	 * @link https://eu.wargaming.net/developers/api_reference/wot/account/list/
+	 * @throws InvalidArgumentException
 	 */
 	public function getUser($request, $req_value, $fields = array(), $hours_ago = 2)
 	{
@@ -173,18 +187,20 @@ Class Wot
 
 		$u .= '&application_id='.$this->app_id;
 
-		if(!empty($fields))
-		{
+		if(!empty($fields)) {
 			$u.= '&fields='.implode(',', $fields);
 		}
 
 		$u .= '&language='.$this->lang;
 
+		if($request === 'search' && !empty($this->_limit)) {
+			$u .= '&limit='.(int)$this->_limit;
+		}
+
 		return $this->_processRequest($u);
 	}
 
 	/**
-	 * @throws InvalidArgumentException
 	 * @param string $request available values:<br>
 	 *		"info",<br>
 	 *		"search"<br>
@@ -193,6 +209,7 @@ Class Wot
 	 * @param array $fields
 	 * @return string
 	 * @link https://eu.wargaming.net/developers/api_reference/wot/clan/list/
+	 * @throws InvalidArgumentException
 	 */
 	public function getClan($request, $search_value, $fields = array())
 	{
@@ -213,6 +230,10 @@ Class Wot
 
 		$u .= '&application_id='.$this->app_id.'&fields='.implode(',', $fields).'&language='.$this->lang;
 
+		if($request === 'search' && !empty($this->_limit)) {
+			$u .= '&limit='.(int)$this->_limit;
+		}
+
 		return $this->_processRequest($u);
 	}
 
@@ -232,6 +253,7 @@ Class Wot
 	 * @param array $fields
 	 * @return string
 	 * @link https://eu.wargaming.net/developers/api_reference/wot/encyclopedia/tanks/
+	 * @throws InvalidArgumentException
 	 */
 	public function getWiki($request, $req_value, $fields = array())
 	{
@@ -280,7 +302,6 @@ Class Wot
 	}
 
 	/**
-	 * @throws InvalidArgumentException
 	 * @param string $request available values:<br>
 	 *		"types",<br>
 	 *		"dates",<br>
@@ -293,6 +314,7 @@ Class Wot
 	 * @param string $date Date in UNIX timestamp or ISO 8601 format. E.g.: 1376542800 or 2013-08-15T00:00:00
 	 * @return string
 	 * @link https://eu.wargaming.net/developers/api_reference/wot/ratings/types/
+	 * @throws InvalidArgumentException
 	 */
 	public function getRatings($request, $req_value = '', $fields = array(), $date = 0)
 	{
@@ -311,8 +333,7 @@ Class Wot
 				$u .= 'accounts/?type='.$req_value['type'];
 				$u .= '&account_id='.$req_value['account_id'];
 
-				if(!empty($date))
-				{
+				if(!empty($date)) {
 					$u .= 'date='.$date;
 				}
 
@@ -323,8 +344,7 @@ Class Wot
 				$u .= '&rank_field='.$req_value['rank_field'];
 				$u .= '&account_id='.$req_value['account_id'];
 
-				if(!empty($date))
-				{
+				if(!empty($date)) {
 					$u .= '?date='.$date;
 				}
 
@@ -334,8 +354,7 @@ Class Wot
 				$u .= $request.'/?type='.$req_value['type'];
 				$u .= '&rank_field='.$req_value['rank_field'];
 
-				if(!empty($date))
-				{
+				if(!empty($date)) {
 					$u .= '?date='.$date;
 				}
 
@@ -345,8 +364,7 @@ Class Wot
 				throw new InvalidArgumentException('Invalid value for parameter $request given: '.$request);
 		}
 
-		if(substr($u, -1, 1) !== '?')
-		{
+		if(substr($u, -1, 1) !== '?') {
 			$u .= '&';
 		}
 
