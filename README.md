@@ -1,5 +1,7 @@
 This is a modified version from thunder-spb/wot-api-description.
 
+See also: [JohnnyDevNull/wot-stats-search-engine](https://github.com/JohnnyDevNull/wot-stats-search-engine)
+
 # World of Tanks unofficial API
 
 Supports the Wargaming 2.0 API
