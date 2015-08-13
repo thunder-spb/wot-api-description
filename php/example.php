@@ -1,5 +1,5 @@
 <?php
-include 'WotClass.php';
+include 'wot.class.php';
 $wot = new Wot('RU', 'ru', '9fd2a424400aa541a994056eddeb2438');		// region, language, your <app_id_here>
 //$wot->setCacheType('memcache', $params=Array('host'=>'unix:///var/run/memcached/memcached.sock', 'port'=>0));	// You can set Memcache aggregator.
 //$wot->setCacheType('apc', $params=Array());	// Or APC, if php5-apc has been installed
