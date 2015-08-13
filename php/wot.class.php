@@ -151,6 +151,7 @@ Class Wot
 	 *		"search",<br>
 	 *		"vehicles",<br>
 	 *		"stats",<br>
+	 *		"achievements"<br>
 	 *		otherwise an InvalidArgumentException will be thrown.
 	 * @param array $req_value depends on the request.
 	 *		For parameter $request = "info",
@@ -181,6 +182,10 @@ Class Wot
 					$u .= '/wot/stats/accountbytime/?account_id='.$req_value.'&hours_ago='.$hours_ago;
 					break;
 
+				case 'achievements':
+					$u .= '/wot/account/achievements/?account_id='.$req_value.'&hours_ago='.$hours_ago;
+					break;
+
 				default:
 					throw new InvalidArgumentException('Invalid value for parameter $request given: '.$request);
 		}
@@ -203,17 +208,18 @@ Class Wot
 	/**
 	 * @param string $request available values:<br>
 	 *		"info",<br>
-	 *		"search"<br>
+	 *		"search",<br>
+	 *		"members"<br>
 	 *		otherwise an InvalidArgumentException will be thrown.
 	 * @param string $search_value
 	 * @param array $fields
 	 * @return string
-	 * @link https://eu.wargaming.net/developers/api_reference/wot/clan/list/
+	 * @link https://eu.wargaming.net/developers/api_reference/wgn/clans/list/
 	 * @throws InvalidArgumentException
 	 */
 	public function getClan($request, $search_value, $fields = array())
 	{
-		$u = $this->api_url.'/wot/clan/';
+		$u = $this->api_url.'/wgn/clans/';
 
 		switch ($request) {
 			case 'info':
@@ -222,6 +228,10 @@ Class Wot
 
 			case 'search':
 				$u .= 'list/?search='.$search_value;
+				break;
+
+			case 'members':
+				$u .= 'membersinfo/?account_id='.$search_value;
 				break;
 
 			default:
@@ -233,6 +243,52 @@ Class Wot
 		if($request === 'search' && !empty($this->_limit)) {
 			$u .= '&limit='.(int)$this->_limit;
 		}
+
+		return $this->_processRequest($u);
+	}
+
+	/**
+	 * @param string $request available values:<br>
+	 *		"info",<br>
+	 *		"buildings",<br>
+	 *		"accountstats"<br>
+	 *		otherwise an InvalidArgumentException will be thrown.
+	 * @param string $search_value
+	 * @param array $fields
+	 * @return string
+	 * @link https://eu.wargaming.net/developers/api_reference/wot/stronghold/info/
+	 * @throws InvalidArgumentException
+	 */
+
+	public function getStronghold($request, $search_value, $fields = array())
+	{
+		$u = $this->api_url.'/wot/stronghold/';
+
+		switch ($request) {
+			case 'info':
+				$u .= 'info/?clan_id='.$search_value;
+				break;
+
+			case 'buildings':
+				$u .= 'buildings/?s';
+				break;
+
+			case 'accountstats':
+				$u .= 'accountstats/?account_id='.$search_value;
+				break;
+
+			default:
+				throw new InvalidArgumentException('Invalid value for parameter $request given: '.$request);
+		}
+
+		$u .= '&application_id='.$this->app_id.'&language='.$this->lang;
+
+		if ($fields) { $u .= '&fields='.implode(',', $fields); }
+
+		if($request === 'search' && !empty($this->_limit)) {
+			$u .= '&limit='.(int)$this->_limit;
+		}
+		print_r($u);
 
 		return $this->_processRequest($u);
 	}

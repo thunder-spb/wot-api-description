@@ -14,8 +14,13 @@ $fields = Array(); // Make a full request only for develop. Select only usable f
 //print_r($wot->getUser('search', 'Upgrade', $fields));			// Ex.: $fields = Array('nickname', 'id');
 //print_r($wot->getUser('vehicles', '6440135', $fields));		// Ex.: $fields = Array('mark_of_mastery', 'tank_id', 'achievements.medal_dumitru', 'statistics');
 //print_r($wot->getUser('ratings', '6440135', $fields));		// Ex.: $fields = Array('battle_avg_performance', 'battle_avg_xp.place', ... and etc. See full responce for select fields
+//print_r($wot->getUser('achievements', '6440135', $fields));
 //print_r($wot->getClan('info', '40265', $fields));
 //print_r($wot->getClan('search', 'Radio Record', $fields));
+//print_r($wot->getClan('members', '6440135', $fields));
+//print_r($wot->getStronghold('info', '150822', $fields));
+//print_r($wot->getStronghold('buildings', '150822', $fields));
+//print_r($wot->getStronghold('accountstats', '6440135', $fields));
 //print_r($wot->getWiki('tanks', null, $fields));
 //print_r($wot->getWiki('tankinfo', 2849, $fields));
 //print_r($wot->getWiki('tankengines', null, $fields));
